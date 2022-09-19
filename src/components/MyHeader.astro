@@ -1,0 +1,48 @@
+---
+---
+
+<header>
+  <nav>
+    <ul>
+      <h1>Fire's Real Page</h1>
+    </ul>
+    <ul>
+      <a href="/">Home</a>
+    </ul>
+    <ul>
+      <a href="/about/">About</a>
+    </ul>
+    <ul>
+      <a href="/contact">Contact</a>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  header {
+    background-color: var(--color-border);
+    nav {
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h1 {
+        margin: 0;
+      }
+
+      ul,
+      li {
+        margin: 0;
+        padding-inline: 1ch;
+
+        &:nth-child(1) {
+          margin-inline: 0 auto;
+        }
+      }
+    }
+  }
+</style>

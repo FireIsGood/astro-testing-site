@@ -4,4 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://fireisgood.github.io/',
   base: '/astro-testing-site',
+  outDir: './docs'
 });

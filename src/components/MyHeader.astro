@@ -3,17 +3,17 @@
 
 <header>
   <nav>
+    <h1>Fire's Real Page</h1>
     <ul>
-      <h1>Fire's Real Page</h1>
-    </ul>
-    <ul>
-      <a href="/astro-testing-site/">Home</a>
-    </ul>
-    <ul>
-      <a href="/astro-testing-site/about">About</a>
-    </ul>
-    <ul>
-      <a href="/astro-testing-site/contact">Contact</a>
+      <li>
+        <a href="/astro-testing-site/">Home</a>
+      </li>
+      <li>
+        <a href="/astro-testing-site/about">About</a>
+      </li>
+      <li>
+        <a href="/astro-testing-site/contact">Contact</a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -32,15 +32,33 @@
 
       h1 {
         margin: 0;
+        margin-right: auto;
       }
 
-      ul,
-      li {
+      ul {
+        display: flex;
+        place-items: right;
         margin: 0;
-        padding-inline: 1ch;
+        padding: 0;
+        list-style: none;
 
-        &:nth-child(1) {
-          margin-inline: 0 auto;
+        li {
+          padding-inline: 2ch;
+
+          a {
+            color: var(--color-link);
+            text-decoration: none;
+            background-image: linear-gradient(var(--color-link-hover) 0 0);
+            background-repeat: no-repeat;
+            background-size: var(--hover-grow, 0%) 5%;
+            background-position: calc(100% - var(--hover-grow, 0%)) 100%;
+            transition: background 0.2s, background-position 0s;
+
+            &:hover {
+              color: var(--color-link-hover);
+              --hover-grow: 100%;
+            }
+          }
         }
       }
     }

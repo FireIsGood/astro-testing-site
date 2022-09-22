@@ -16,6 +16,7 @@
     "svelte": "^3.50.1"
   },
   "devDependencies": {
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "simple-svelte-autocomplete": "^2.4.0"
   }
 }

@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import IsItChristmas from "../components/IsItChristmas.svelte";
+
+let title = "Is It Christmas?"
+---
+
+<Layout title={title}>
+  <div class="center-big">
+    <IsItChristmas />
+  </div>
+</Layout>
+
+<style>
+  .center-big {
+    display: flex;
+    min-height: 100vh;
+    
+  }
+</style>

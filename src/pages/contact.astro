@@ -5,7 +5,12 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Page">
   <main>
     <h1>Contact me</h1>
-    <p><strong><span class="cool-text">FireIsGood#0733</span></strong></p>
+    <p>via Discord: <strong><span class="cool-text">FireIsGood#0733</span></strong></p>
+    <p>
+      via Email: <a href="mailto:fireisadequate@gmail.com"
+        >fireisadequate@gmail.com</a
+      >
+    </p>
     <p>or don't</p>
   </main>
 </Layout>
@@ -16,6 +21,11 @@ import Layout from "../layouts/Layout.astro";
     margin-inline: auto;
     padding: 1rem;
   }
+
+  a {
+    color: var(--color-link);
+  }
+
   .cool-text {
     background: linear-gradient(0deg, #ad7dcd, #78cefc);
     background-size: 400% 200%;

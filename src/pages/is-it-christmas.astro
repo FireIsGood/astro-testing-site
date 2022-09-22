@@ -2,19 +2,27 @@
 import Layout from "../layouts/Layout.astro";
 import IsItChristmas from "../components/IsItChristmas.svelte";
 
-let title = "Is It Christmas?"
+let title = "Is It Christmas?";
 ---
 
 <Layout title={title}>
-  <div class="center-big">
-    <IsItChristmas />
-  </div>
+  <main>
+    <p>Is it christmas?</p>
+    <div class="center-big">
+      <IsItChristmas />
+    </div>
+  </main>
 </Layout>
 
-<style>
+<style lang="scss">
+  main {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
   .center-big {
     display: flex;
-    min-height: 100vh;
-    
+    place-content: center;
   }
 </style>

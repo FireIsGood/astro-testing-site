@@ -1,13 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Counter from "../components/counter.svelte";
+import OperatorSelector from "../components/OperatorSelector.svelte";
+
+let title = "Main Page"
 ---
 
-<Layout title="Page">
+<Layout title={title}>
   <main>
     <h1>Wow</h1>
     <p>Now this is a page</p>
     <Counter client:load />
+    <OperatorSelector client:idle />
   </main>
 </Layout>
 

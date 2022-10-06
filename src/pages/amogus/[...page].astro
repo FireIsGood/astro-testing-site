@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const pages = [
+    {
+      slug: undefined,
+      title: "Main Page",
+      text: "big main page!!",
+    },
+    {
+      slug: "sans",
+      title: "Sans Page",
+      text: "test page with test text",
+    },
+  ];
+  return paginate(pages, { pageSize: 10 });
+}
+
+const { title, text, page } = Astro.props;
+---
+
+<Layout title={title}>
+  <main>
+    <h1>Wow this is amogus</h1>
+    <p>{text}</p>
+    <p>{page.data}</p>
+    <ul></ul>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding: 1rem;
+  }
+</style>

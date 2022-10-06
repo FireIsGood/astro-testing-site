@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Counter from "../components/counter.svelte";
 import OperatorSelector from "../components/OperatorSelector.svelte";
 
-let title = "Main Page"
+let title = "Main Page";
 ---
 
 <Layout title={title}>
@@ -11,7 +11,9 @@ let title = "Main Page"
     <h1>Wow</h1>
     <p>Now this is a page</p>
     <Counter client:load />
-    <OperatorSelector client:idle />
+    <OperatorSelector client:idle /><div>
+      <a href="/astro-testing-site/amogus">Go to amogus</a>
+    </div>
   </main>
 </Layout>
 
